@@ -6,7 +6,7 @@ deploy_job:
   only:
     - master
   tags:
-    - train
+    - billing
   script:
     - rsync -ruog --delete --exclude '.git' --exclude '.gitignore' --exclude 'storage' ./   /volume1/web/tools
     - cd /volume1/web/tools
